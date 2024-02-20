@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magic Paintbrush</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://github.com/processing/p5.js/releases/download/v1.9.0/p5.min.js"></script>
+    <script>
+    // Define variables
+    let brushHue = 0;
+    let brushSize = 10;
+    let brushOpac = 100;
+    let bgColour;
+    let guide;
+    let clearScreen = false;
+
+    function setup() {
+      createCanvas(600, 600);
+      guide = new Instructions(10, 10);
+
+      // HSL colour with values between 0 and 100
+      colorMode(HSL, 100);
+      bgColour = color(0, 0, 50); // 85% grey is P5js default
+      background(bgColour);
+    }
+
+    function draw() {
+      magicBrush();
+      guide.show();
+    }
+
+    function magicBrush() {
+      if (clearScreen == true) {
+        background(bgColour);
+        clearScreen = false;
+      } else {
+        if (mouseIsPressed == true) {
+          strokeWeight(brushSize);
+          stroke(brushHue, 100, 50, brushOpac);
+          line(mouseX, mouseY, pmouseX, pmouseY);
+
+          brushHue++;
+
+          if (brushHue == 100) {
+            brushHue = 70;
+            brushHue *= -1;
+          }
+        }
+      }
+    }
+
+    class Instructions {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+
+      show() {
+      noStroke();
+      fill(0, 0, 50, 25);
+      rect(this.x, this.y, 490, 30);
+
+      textSize(18);  
+      fill(0, 0, 0);
+      text("Brush size: ↑ / ↓    Opacity: ← / →     Clear: c      Reset: r ", this.x + 10, this.y + 20);
+      }
+    }
+
+    function keyReleased() {
+      if (keyCode === UP_ARROW) {
+        if (brushSize <250) {brushSize += 10;}
+      }
+      if (keyCode === DOWN_ARROW) {
+        if (brushSize >10) {brushSize -= 10;}
+      }
+      if (keyCode === RIGHT_ARROW) {
+        if (brushOpac <100) {brushOpac += 10;}
+      }
+      if (keyCode === LEFT_ARROW) {
+        if (brushOpac >10) { brushOpac -= 10;}
+      }
+      if (key == "c") {
+        clearScreen = true;
+      }
+      if (key == "r") {
+        clearScreen = true;
+        brushSize = 10;
+        brushOpac = 100;
+      }
+    }
+
+    </script>
+  </head>
+
+  <body>
+    <main></main>
+    <script src="index.js"></script>
+  </body>
+</html>
