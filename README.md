@@ -1,2 +1,6 @@
-# DG8002
-Dummy repo for my DG8002 Digital Media Environments class
+# DG8002 Digital Media Environments
+
+Repo of assignments for DG8002 Digital Media Environments at [Toronto Metropolitan University](https://torontomu.ca)
+
+All projects by Michael J. Young
+https://youngcreative.ca
