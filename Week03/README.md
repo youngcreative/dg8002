@@ -6,8 +6,11 @@ https://youngcreative.ca
 Week 3 assignment for DG8002 Digital Media Environments at [Toronto Metropolitan University](https://torontomu.ca)
 
 
-## Inspiration
+## Credits
 
+Creature and Target code by [Nick Fox-Gieg](https://fox-gieg.com)
+
+[Sci-Fi Droid Robot model by Hassaan Shabbir](https://www.blenderkit.com/asset-gallery-detail/45ee98c2-d943-4cd8-bbc7-48e12c134040/)
 
 
 ## License
