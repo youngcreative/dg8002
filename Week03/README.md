@@ -17,7 +17,7 @@ Creature and Target code by [Nick Fox-Gieg](https://fox-gieg.com)
 
 MIT License
 
-Copyright (c) 2024, Michael J. Young
+Copyright © 2024, Michael J. Young
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -17,7 +17,7 @@ This project is a custom demo of the Bark demo at https://github.com/suno-ai/bar
 
 MIT License
 
-Copyright (c) 2024, Michael J. Young
+Copyright © 2024, Michael J. Young
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
